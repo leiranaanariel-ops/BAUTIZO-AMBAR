@@ -1,0 +1,896 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Cormorant Garamond',serif;
+
+    background:#F8F4EF;
+
+    color:#5D504A;
+
+    overflow-x:hidden;
+
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    background:linear-gradient(to bottom,#FFFDFB,#F6EFE8);
+
+}
+
+.hero-content{
+
+    width:100%;
+
+    max-width:900px;
+
+}
+
+
+/* ==========================================
+   CRUZ
+========================================== */
+
+.cross{
+
+    font-size:60px;
+
+    color:#C6A468;
+
+    margin-bottom:20px;
+
+}
+
+
+/* ==========================================
+   TITULOS
+========================================== */
+
+.subtitle{
+
+    font-size:18px;
+
+    letter-spacing:8px;
+
+    color:#B08B61;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:115px;
+
+    color:#CB8C98;
+
+    font-weight:normal;
+
+    line-height:1;
+
+}
+
+.hero h2{
+
+    font-size:42px;
+
+    font-weight:300;
+
+    margin-top:12px;
+
+}
+
+.date{
+
+    margin-top:20px;
+
+    font-size:24px;
+
+}
+
+
+/* ==========================================
+   SOBRE
+========================================== */
+
+.envelope{
+
+    width:420px;
+
+    height:280px;
+
+    margin:70px auto 30px;
+
+    position:relative;
+
+    cursor:pointer;
+
+}
+
+.envelope::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:#EBCBD1;
+
+    border-radius:0 0 18px 18px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.lid{
+
+    position:absolute;
+
+    width:100%;
+
+    height:170px;
+
+    background:#F3DCE0;
+
+    clip-path:polygon(0 0,100% 0,50% 100%);
+
+    transform-origin:top;
+
+    transition:1s;
+
+    z-index:4;
+
+}
+
+.letter{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:15px;
+
+    transform:translateX(-50%);
+
+    width:90%;
+
+    height:220px;
+
+    background:white;
+
+    border-radius:12px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+
+    transition:1s;
+
+    z-index:2;
+
+}
+
+.letter-cross{
+
+    text-align:center;
+
+    margin-top:42px;
+
+    font-size:36px;
+
+    color:#C6A468;
+
+}
+
+.seal{
+
+    position:absolute;
+
+    left:50%;
+
+    top:155px;
+
+    transform:translate(-50%,-50%);
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:#B95F71;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:42px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.20);
+
+    z-index:5;
+
+}
+
+.envelope.open .lid{
+
+    transform:rotateX(180deg);
+
+}
+
+.envelope.open .letter{
+
+    bottom:150px;
+
+}
+
+.touch{
+
+    margin-top:25px;
+
+    font-size:22px;
+
+}
+
+
+/* ==========================================
+   BOTÓN MÚSICA
+========================================== */
+
+.music-button{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:white;
+
+    padding:14px 24px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.10);
+
+    z-index:999;
+
+}
+
+
+/* ==========================================
+   MAIN
+========================================== */
+
+.hidden{
+
+    display:none;
+
+}
+
+main{
+
+    padding:70px 20px;
+
+}
+
+main section{
+
+    max-width:1000px;
+
+    margin:90px auto;
+
+}
+/* ==========================================
+   BIENVENIDA
+========================================== */
+
+.welcome{
+
+    text-align:center;
+
+}
+
+.welcome h3{
+
+    font-size:46px;
+
+    color:#B08B61;
+
+    margin-bottom:20px;
+
+}
+
+.welcome p{
+
+    font-size:28px;
+
+    line-height:1.8;
+
+}
+
+.name{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:92px;
+
+    color:#CB8C98;
+
+    margin:35px 0 10px;
+
+}
+
+.parents{
+
+    margin-top:35px;
+
+    font-size:34px;
+
+}
+
+.parents span{
+
+    color:#CB8C98;
+
+    margin:0 12px;
+
+}
+
+
+/* ==========================================
+   TARJETAS
+========================================== */
+
+.information{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.card h4{
+
+    font-size:28px;
+
+    color:#CB8C98;
+
+    margin-bottom:18px;
+
+}
+
+.card p{
+
+    font-size:28px;
+
+}
+
+
+/* ==========================================
+   CUENTA REGRESIVA
+========================================== */
+
+.countdown{
+
+    text-align:center;
+
+}
+
+.countdown h3{
+
+    font-size:42px;
+
+    color:#B08B61;
+
+    margin-bottom:25px;
+
+}
+
+#timer{
+
+    font-size:44px;
+
+    color:#CB8C98;
+
+    font-weight:bold;
+
+}
+
+
+/* ==========================================
+   UBICACIÓN
+========================================== */
+
+.location{
+
+    text-align:center;
+
+}
+
+.location h3{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.location p{
+
+    font-size:28px;
+
+    margin-bottom:30px;
+
+}
+
+
+/* ==========================================
+   BOTONES
+========================================== */
+
+.btn{
+
+    display:inline-block;
+
+    padding:18px 40px;
+
+    background:#CB8C98;
+
+    color:white;
+
+    text-decoration:none;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.35s;
+
+}
+
+.btn:hover{
+
+    background:#B86D84;
+
+    transform:translateY(-4px);
+
+}
+
+
+/* ==========================================
+   FORMULARIO
+========================================== */
+
+.confirm{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:50px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.confirm h3{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:35px;
+
+}
+
+#rsvpForm{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+#rsvpForm input,
+#rsvpForm select,
+#rsvpForm textarea{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#F8F3F0;
+
+    font-size:20px;
+
+    font-family:'Cormorant Garamond',serif;
+
+}
+
+#rsvpForm textarea{
+
+    resize:none;
+
+    height:140px;
+
+}
+
+.row{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.field{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.field label{
+
+    margin-bottom:8px;
+
+    font-size:20px;
+
+    color:#8A6B62;
+
+}
+/* ==========================================
+   MENSAJE FINAL
+========================================== */
+
+.thanks{
+
+    text-align:center;
+
+    padding:70px 20px;
+
+}
+
+.thanks h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:90px;
+
+    color:#CB8C98;
+
+    margin-bottom:20px;
+
+}
+
+.thanks p{
+
+    font-size:28px;
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================
+   ANIMACIONES
+========================================== */
+
+main section{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:opacity .8s ease, transform .8s ease;
+
+}
+
+main section.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+.envelope{
+
+    animation:floating 4s ease-in-out infinite;
+
+}
+
+
+/* ==========================================
+   EFECTOS
+========================================== */
+
+.card,
+.confirm,
+.btn,
+.music-button{
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.confirm:hover{
+
+    box-shadow:0 20px 40px rgba(0,0,0,.10);
+
+}
+
+.music-button:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.hero{
+
+    padding:40px 20px;
+
+}
+
+.hero h1{
+
+    font-size:78px;
+
+}
+
+.hero h2{
+
+    font-size:32px;
+
+}
+
+.subtitle{
+
+    font-size:16px;
+
+    letter-spacing:5px;
+
+}
+
+.date{
+
+    font-size:20px;
+
+}
+
+.envelope{
+
+    width:320px;
+
+    height:220px;
+
+}
+
+.lid{
+
+    height:130px;
+
+}
+
+.letter{
+
+    height:170px;
+
+}
+
+.seal{
+
+    width:75px;
+
+    height:75px;
+
+    font-size:34px;
+
+}
+
+.touch{
+
+    font-size:18px;
+
+}
+
+.name{
+
+    font-size:68px;
+
+}
+
+.welcome p{
+
+    font-size:22px;
+
+}
+
+.card{
+
+    padding:28px;
+
+}
+
+.card h4{
+
+    font-size:24px;
+
+}
+
+.card p{
+
+    font-size:22px;
+
+}
+
+#timer{
+
+    font-size:28px;
+
+    line-height:1.5;
+
+}
+
+.location p{
+
+    font-size:22px;
+
+}
+
+.confirm{
+
+    padding:30px;
+
+}
+
+.row{
+
+    flex-direction:column;
+
+}
+
+.btn{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.music-button{
+
+    top:15px;
+
+    right:15px;
+
+    font-size:16px;
+
+    padding:12px 18px;
+
+}
+
+.thanks h2{
+
+    font-size:64px;
+
+}
+
+.thanks p{
+
+    font-size:22px;
+
+}
+
+}

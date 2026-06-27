@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Santo Bautizo | Ámbar Antonella</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- BOTÓN MÚSICA -->
+
+<button id="musicButton" class="music-button">
+
+    🎵 Música
+
+</button>
+
+
+<!-- ===========================
+PORTADA
+=========================== -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="cross">
+
+            ✝
+
+        </div>
+
+        <p class="subtitle">
+
+            SANTO BAUTIZO
+
+        </p>
+
+        <h1>
+
+            Ámbar
+
+        </h1>
+
+        <h2>
+
+            Antonella Navarrete Orozco
+
+        </h2>
+
+        <p class="date">
+
+            29 de Agosto de 2026 · 15:00 hrs.
+
+        </p>
+
+        <div id="envelope" class="envelope">
+
+            <div class="lid"></div>
+
+            <div class="letter">
+
+                <div class="letter-cross">
+
+                    ✝
+
+                </div>
+
+            </div>
+
+            <div class="seal">
+
+                AA
+
+            </div>
+
+        </div>
+
+        <p class="touch">
+
+            Toca el sobre para abrir la invitación
+
+        </p>
+
+    </div>
+
+</header>
+
+
+<!-- ===========================
+INVITACIÓN
+=========================== -->
+
+<main id="invitation" class="hidden">
+
+<section class="welcome">
+
+    <h3>
+
+        Con la bendición de Dios
+
+    </h3>
+
+    <p>
+
+        Tenemos el honor de invitarte a celebrar el
+
+        Santo Bautizo de nuestra querida hija
+
+    </p>
+
+    <h2 class="name">
+
+        Ámbar Antonella
+
+    </h2>
+
+    <p>
+
+        Navarrete Orozco
+
+    </p>
+
+    <div class="parents">
+
+        Gustavo Navarrete
+
+        <span>&</span>
+
+        Carla Orozco
+
+    </div>
+
+</section>
+
+
+<section class="information">
+
+    <div class="card">
+
+        <h4>
+
+            📅 Fecha
+
+        </h4>
+
+        <p>
+
+            Sábado 29 de Agosto de 2026
+
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h4>
+
+            🕒 Hora
+
+        </h4>
+
+        <p>
+
+            15:00 hrs.
+
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h4>
+
+            📍 Lugar
+
+        </h4>
+
+        <p>
+
+            Parroquia San Pablo
+
+        </p>
+
+    </div>
+
+</section>
+<section class="countdown">
+
+    <h3>
+
+        Falta para este gran día
+
+    </h3>
+
+    <div id="timer">
+
+        00 días · 00 horas · 00 minutos · 00 segundos
+
+    </div>
+
+</section>
+
+
+<section class="location">
+
+    <h3>
+
+        Ubicación
+
+    </h3>
+
+    <p>
+
+        Parroquia San Pablo
+
+    </p>
+
+    <a
+        href="https://maps.google.com"
+        target="_blank"
+        class="btn">
+
+        📍 Cómo llegar
+
+    </a>
+    <section class="reception">
+
+    <h3>
+<section class="reception">
+
+    <h3>
+
+        Recepción
+
+    </h3>
+
+    <p>
+
+        La información sobre la recepción será entregada
+        una vez confirmada tu asistencia.
+
+    </p>
+
+    <p>
+
+        ¡Esperamos contar con tu compañía en este día tan especial! 🤍
+
+    </p>
+
+</section>
+</section>
+
+
+<section class="calendar">
+
+    <h3>
+
+        Guarda la fecha
+
+    </h3>
+
+    <a
+        href="#"
+        id="calendarButton"
+        class="btn">
+
+        📅 Agregar al calendario
+
+    </a>
+
+</section>
+
+
+<section class="confirm">
+
+    <h3>
+
+        Confirma tu asistencia
+
+    </h3>
+
+    <form id="rsvpForm">
+
+        <input
+            type="text"
+            id="nombre"
+            placeholder="Nombre y apellido"
+            required>
+
+        <select id="asistencia">
+
+            <option value="Sí asistiré">
+
+                Si asistiré
+
+            </option>
+
+            <option value="No podré asistir">
+
+                No podré asistir
+
+            </option>
+
+        </select>
+
+        <div class="row">
+
+            <div class="field">
+
+                <label>
+
+                    👨 Cantidad de adultos
+
+                </label>
+
+                <input
+                    type="number"
+                    id="adultos"
+                    value="1"
+                    min="0">
+
+            </div>
+
+            <div class="field">
+
+                <label>
+
+                    👧 Cantidad de niños
+
+                </label>
+
+                <input
+                    type="number"
+                    id="ninos"
+                    value="0"
+                    min="0">
+
+            </div>
+
+        </div>
+
+        <textarea
+            id="comentario"
+            placeholder="¿Quieres dejarnos un mensaje? (Opcional)">
+        </textarea>
+
+        <button
+            type="submit"
+            class="btn">
+
+            Confirmar asistencia por WhatsApp
+
+        </button>
+
+    </form>
+
+</section>
+<section class="thanks">
+
+    <h2>
+
+        ¡Te esperamos!
+
+    </h2>
+
+    <p>
+
+        Será un honor compartir contigo este momento tan especial
+        en la vida de nuestra querida Ámbar Antonella.
+
+    </p>
+
+</section>
+
+</main>
+
+
+<!-- ===========================
+MÚSICA
+=========================== -->
+
+<audio
+    id="music"
+    preload="auto"
+    loop>
+
+    <source
+        src="music/musica.mp3"
+        type="audio/mpeg">
+
+    Tu navegador no soporta audio.
+
+</audio>
+
+
+<!-- ===========================
+JAVASCRIPT
+=========================== -->
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
